@@ -103,7 +103,7 @@ public class CashierEditText extends EditText{
      * 获取输入的钱，单位为分
      * @return
      */
-    public int getCashPenny(){
+    public long getCashPenny(){
         return parseToPenny(getText().toString());
     }
 
@@ -205,7 +205,7 @@ public class CashierEditText extends EditText{
             mEditText.removeTextChangedListener(this);
 
             String text = editable.toString();
-            int penny = parseToPenny(text);
+            long penny = parseToPenny(text);
             if (penny > mMaxPenny){
                 mEditText.setText(mOldText);
             }else {
@@ -242,7 +242,7 @@ public class CashierEditText extends EditText{
         }
     }
 
-    private static int parseToPenny(String text){
+    private static long parseToPenny(String text){
         return MoneyUtils.parseToPenny(text);
     }
 

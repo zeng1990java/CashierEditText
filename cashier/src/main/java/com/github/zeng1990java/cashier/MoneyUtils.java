@@ -18,7 +18,7 @@ public class MoneyUtils {
      * @param text
      * @return
      */
-    public static int parseToPenny(String text){
+    public static long parseToPenny(String text){
         if (TextUtils.isEmpty(text)){
             return 0;
         }
@@ -63,24 +63,4 @@ public class MoneyUtils {
         return penney / 100 + "." + sDecimalFormat.format(penney % 100);
     }
 
-    /**
-     * 份转成字符串
-     * @param penney
-     * @return
-     */
-    public static String pennyToStringForInput(long penney){
-        if (penney == 0){
-            return "0";
-        }
-
-        if (penney < 100){
-            return "0."+penney;
-        }
-
-        if (penney % 100 == 0){
-            return penney / 100 + "";
-        }
-
-        return penney / 100 + "." + (penney % 100);
-    }
 }

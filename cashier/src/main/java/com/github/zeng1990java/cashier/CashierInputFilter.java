@@ -9,8 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by Jackie on 2016/1/30.
- * 过滤用户输入只能为金额格式
+ * @author zxb
  */
 public class CashierInputFilter implements InputFilter {
 
@@ -26,8 +25,6 @@ public class CashierInputFilter implements InputFilter {
     private static final int POINTER_LENGTH = 2;
 
     private static final String POINTER = ".";
-
-    private static final String ZERO = "0";
     
     private int mMaxPenny = MAX_VALUE;
 
