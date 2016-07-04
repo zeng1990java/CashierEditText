@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CashierEditText">
+        <attr name="cet_prefix_text" format="string"/>
+        <attr name="cet_max_penny" format="integer"/>
+    </declare-styleable>
+</resources>
